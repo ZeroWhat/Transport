@@ -88,7 +88,7 @@ public class AchatDetailsActivity extends BaseActivity implements View.OnClickLi
     @Override
     public void initViews() {
 
-
+//
 
             achat_details_layout_back= findViewById(R.id.achat_details_layout_back);
             achat_details_tv_billno= findViewById(R.id.achat_details_tv_billno);
