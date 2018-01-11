@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="planets">
+
+        <item>功能</item>
+        <item>显示全部库存</item>
+        <item>显示不一致库存</item>
+        <item>仅显示有发生数</item>
+        <item>仅显示发生并未盘的</item>
+
+    </string-array>
+</resources>

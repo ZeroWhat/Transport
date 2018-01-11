@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/inventory_count_lv_item_layout">
+    <TextView
+        android:id="@+id/inventory_count_lv_item_tv_goodsname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/goodsname_1"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:ellipsize="end"
+        android:maxLines="1"/>
+    <TextView
+        android:id="@+id/inventory_ount_lv_item_tv_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="库存个数："
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:visibility="gone"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/inventory_count_lv_item_tv_number"
+            android:layout_width="0dip"
+            android:layout_weight="1.5"
+            android:layout_height="wrap_content"
+            android:text="已出个数："
+            android:textSize="20sp"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/inventory_count_item_ed_number"
+            android:layout_width="0dip"
+            android:layout_weight="2.5"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="请输入个数"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/inventory_count_item_bt_save"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:layout_weight="1"
+            android:background="@drawable/shape_rounded_rectangle"
+            android:text="保存"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/inventory_count_item_bt_same"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_rounded_rectangle"
+            android:text="一致"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:layout_margin="5dip"/>
+    </LinearLayout>
+
+</LinearLayout>

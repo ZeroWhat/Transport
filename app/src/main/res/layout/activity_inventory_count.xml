@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/blue"
+            android:gravity="center"
+            android:text="@string/inventory"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:id="@+id/inventorycount_back"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:background="@mipmap/fh2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/back"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dip"
+        android:text="查询库存"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:visibility="gone">
+    </TextView>
+    <EditText
+        android:id="@+id/inventorycount_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:hint="请输入查询的机器名称"
+        android:visibility="gone"/>
+    <Spinner
+        android:id="@+id/inventorycount_sp"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"/>
+    <Spinner
+        android:id="@+id/inventorycount_sp2"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"/>
+
+
+    <ListView
+        android:id="@+id/inventorycount_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:divider="@color/black"
+        android:dividerHeight="2dp"/>
+
+</LinearLayout>

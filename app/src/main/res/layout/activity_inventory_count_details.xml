@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/blue"
+            android:gravity="center"
+            android:text="@string/inventory_details"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:id="@+id/inventorycountdetails_back"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:background="@mipmap/fh2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/back"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/iinventorycountdetails_tv_goodsname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/goodsname_1"
+        android:textSize="20sp"
+        android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/iinventorycountdetails_tv_sumdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/inventorycountdetails_tv_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/black"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/inventorycountdetails_tv_outnumber"
+            android:layout_width="0dip"
+            android:layout_weight="1.5"
+            android:layout_height="wrap_content"
+            android:text="@string/inventory_number"
+            android:textSize="20sp"
+            android:gravity="end"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/inventorycountdetails_ed_number"
+            android:layout_width="0dip"
+            android:layout_weight="2.5"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="@string/input_number"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/iinventorycountdetails_bt_save"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:layout_weight="1"
+            android:background="@drawable/shape_rounded_rectangle"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            android:textSize="20dp"/>
+
+        <Button
+            android:id="@+id/inventorycountdetails_bt_same"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_rounded_rectangle"
+            android:text="@string/same"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:layout_margin="5dip"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/isgoodname"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="请扫描条码进行配对，扫描条码与机器型号对比正确才可以盘点"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textColor="@color/red"
+        android:visibility="gone"/>
+    <Button
+        android:id="@+id/inventorycountdetails_bt_"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_rounded_rectangle"
+        android:text="@string/back"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_margin="20sp"
+        android:visibility="gone"/>
+
+</LinearLayout>

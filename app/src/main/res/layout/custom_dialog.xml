@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_gravity="center"
+    android:orientation="vertical" >
+    <EditText
+        android:id="@+id/number"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:hint="@string/input_barcode" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="条码类型："
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_marginLeft="20sp"/>
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/custom_dialog_in"
+                android:text="内机"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"/>
+            <RadioButton
+                android:id="@+id/custom_dialog_out"
+                android:text="外机"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"/>
+
+        </RadioGroup>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60.0dip"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/positiveButton"
+            android:layout_width="60dip"
+            android:layout_height="30dip"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:background="@mipmap/ok"/>
+
+        <Button
+            android:id="@+id/negativeButton"
+            android:layout_width="60dip"
+            android:layout_height="30dip"
+            android:background="@mipmap/cancel"
+            android:layout_marginLeft="20.0dip"
+            android:gravity="center"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+</LinearLayout>

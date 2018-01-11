@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/delete_scanlist_title">
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="#35bbb0"
+            android:gravity="center"
+            android:text="@string/updata_scan"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+        <LinearLayout
+            android:id="@+id/delete_scanlist_layout_back"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:background="@mipmap/fh2" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/back"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/delete_scanlist_tv_number"
+            android:layout_width="wrap_content"
+            android:layout_height="50dip"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"/>
+    </RelativeLayout>
+
+
+    <com.maimengmami.waveswiperefreshlayout.WaveSwipeRefreshLayout
+        android:id="@+id/wave_layout"
+        android:layout_width="match_parent"
+        app:above_wave_color="@color/material_deep_teal_200"
+        app:blow_wave_color="@color/material_deep_teal_500"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/delete_scanlist_title"
+        android:layout_above="@+id/delete_scanlist_updata_bt">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/delete_scanlist_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.maimengmami.waveswiperefreshlayout.WaveSwipeRefreshLayout>
+
+
+    <Button
+        android:id="@+id/delete_scanlist_updata_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/updata_scan"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shape_rounded_rectangle"/>
+
+</RelativeLayout>

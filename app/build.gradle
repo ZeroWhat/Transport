@@ -1,0 +1,62 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "com.whycools.transport"
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 83
+        versionName "1.1."
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    allprojects {
+        repositories {
+            jcenter()
+            mavenCentral()
+        }
+    }
+
+    useLibrary'org.apache.http.legacy'//解决xutils找不到文件的问题
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+//    compile project(':library')
+    compile 'com.android.support:appcompat-v7:26.+'
+    testCompile 'junit:junit:4.12'
+    compile files('libs/xUtils-2.6.14.jar')
+    compile files('libs/gzip-1.2.0.jar')
+    compile files('libs/scanSDK.jar')
+    compile files('libs/log4j-1.2.17.jar')
+    compile files('libs/android-logging-log4j-1.0.3.jar')
+    compile 'com.github.bumptech.glide:glide:3.6.1'
+    compile 'com.squareup.retrofit2:retrofit:2.0.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0'
+    compile 'io.reactivex:rxjava:1.1.0'
+    compile 'io.reactivex:rxandroid:1.1.0'
+    compile 'com.github.chrisbanes.photoview:library:+'
+    compile'com.facebook.fresco:fresco:0.5.0+'
+    compile project(':PushSDK')
+    //圆形图片文字的使用
+    compile 'com.github.thinkcool:circletextimageview:1.0.20151218'
+    //上拉加载下拉刷新
+    compile project(':waveswiperefreshlayout')
+    //控件recyclerview
+    compile 'com.android.support:recyclerview-v7:26.+'
+    //dialogs
+    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
+
+
+}
